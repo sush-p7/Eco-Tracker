@@ -1,0 +1,8 @@
+import 'package:eco/core/app_export.dart';import 'package:eco/widgets/custom_elevated_button.dart';import 'package:flutter/material.dart';class Iphone11ProMaxTwentytwoScreen extends StatelessWidget {const Iphone11ProMaxTwentytwoScreen({Key? key}) : super(key: key);
+
+@override Widget build(BuildContext context) { mediaQueryData = MediaQuery.of(context); return SafeArea(child: Scaffold(backgroundColor: appTheme.tealA400, body: Container(width: double.maxFinite, padding: EdgeInsets.symmetric(horizontal: 35.h, vertical: 56.v), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [Container(height: 73.adaptSize, width: 73.adaptSize, margin: EdgeInsets.only(left: 13.h), decoration: BoxDecoration(color: theme.colorScheme.onSecondaryContainer.withOpacity(1), borderRadius: BorderRadius.circular(36.h))), SizedBox(height: 18.v), Container(width: 223.h, margin: EdgeInsets.only(left: 13.h), child: Text("Eco\nTracker", maxLines: 2, overflow: TextOverflow.ellipsis, style: theme.textTheme.displayLarge)), Spacer(), SizedBox(height: 24.v), CustomImageView(imagePath: ImageConstant.imgObjects, height: 274.v, width: 343.h)])), bottomNavigationBar: _buildGetStartedButton(context))); } 
+/// Section Widget
+Widget _buildGetStartedButton(BuildContext context) { return CustomElevatedButton(height: 70.v, text: "Get starteed", margin: EdgeInsets.only(left: 51.h, right: 49.h, bottom: 36.v), buttonStyle: CustomButtonStyles.fillOnSecondaryContainer, buttonTextStyle: CustomTextStyles.titleMediumSFProTextPrimary, onPressed: () {onTapGetStartedButton(context);}); } 
+/// Navigates to the signUpScreen when the action is triggered.
+onTapGetStartedButton(BuildContext context) { Navigator.pushNamed(context, AppRoutes.signUpScreen); } 
+ }

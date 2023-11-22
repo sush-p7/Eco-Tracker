@@ -1,0 +1,6 @@
+import 'package:eco/core/app_export.dart';import 'package:eco/widgets/custom_elevated_button.dart';import 'package:flutter/material.dart';class WelcomeOneScreen extends StatelessWidget {const WelcomeOneScreen({Key? key}) : super(key: key);
+
+@override Widget build(BuildContext context) { mediaQueryData = MediaQuery.of(context); return SafeArea(child: Scaffold(body: Container(width: double.maxFinite, padding: EdgeInsets.symmetric(horizontal: 46.h), child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [Container(height: 183.adaptSize, width: 183.adaptSize, padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 10.v), decoration: AppDecoration.fillGray.copyWith(borderRadius: BorderRadiusStyle.roundedBorder91), child: CustomImageView(imagePath: ImageConstant.img38151x151, height: 151.adaptSize, width: 151.adaptSize, alignment: Alignment.bottomCenter)), SizedBox(height: 28.v), Text("Welcome Back", style: CustomTextStyles.titleLargePoppins), SizedBox(height: 53.v), CustomElevatedButton(height: 49.v, text: "Continue", buttonStyle: CustomButtonStyles.fillPrimary, onPressed: () {onTapContinue(context);})])))); } 
+/// Navigates to the mainScreen when the action is triggered.
+onTapContinue(BuildContext context) { Navigator.pushNamed(context, AppRoutes.mainScreen); } 
+ }
